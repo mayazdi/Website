@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 import mayazdi.views
+import charter.views as cviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mayazdi.views.default),
     path('post/', mayazdi.views.post),
+    path('charter/', cviews.index),
 ]
