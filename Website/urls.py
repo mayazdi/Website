@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mayazdi.views.default),
     path('post/', mayazdi.views.post),
-    path('charter/', cviews.index),
+    path('charter/<str:origin>_<str:destination>/', cviews.index),
 ]
