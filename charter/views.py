@@ -8,8 +8,7 @@ import jdatetime
 
 def index(request, origin, destination):
     response = requests.get('https://markazetour.ir/Systems/FlightCheapestPriceBar.aspx?Origin=THR&Destination=MHD')
-    res = re.findall('\d+,000', response.text)
-
+    res = re.findall('(\d+),000', response.text)
     time = jdatetime.datetime.now()
     iter = wbc = 7 - int(time.strftime("%w"))
     weeklist = [wbc]
@@ -21,14 +20,26 @@ def index(request, origin, destination):
         weeklist.append(iter)
     if len(weeklist) == 4:
         weeklist.append(month_length)
+    k1 = {}
+    k2 = {}
+    k3 = {}
+    k4 = {}
+    k5 = {}
+    for i in range(1, weeklist[0] + 1):
+        k1[i] = res[i-1]
+    for i in range(weeklist[0] + 1, weeklist[1] + 1):
+        k2[i] = res[i-1]
+    for i in range(weeklist[1] + 1, weeklist[2] + 1):
+        k3[i] = res[i-1]
+    for i in range(weeklist[2] + 1, weeklist[3] + 1):
+        k4[i] = res[i-1]
+    for i in (weeklist[3] + 1, weeklist[4] + 1):
+        k5[i] = res[i-1]
     if origin.lower() == 'tehran' and destination.lower() == 'mashad':
         return render(request, 'Charter.html',
                       {'response': res, 'origin': origin, 'destination': destination, 'wb': time.strftime("%w"),
-                       'wbc': wbc, 'w1': range(1, weeklist[0] + 1), 'w2': range(weeklist[0] + 1, weeklist[1] + 1),
-                       'w3': range(weeklist[1] + 1, weeklist[2] + 1), 'w4': range(weeklist[2] + 1, weeklist[3] + 1),
-                       'w5': range(weeklist[3] + 1, weeklist[4] + 1)})
+                       'wbc': wbc, 'k1': k1, 'k2': k2, 'k3': k3, 'k4': k4, 'k5': k5})
     raise Http404('Cities not supported yet')
-
 
 def chart(request):
     return HttpResponse("<h1>Charter HomePage</h1>")
