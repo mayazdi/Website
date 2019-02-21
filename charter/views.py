@@ -14,16 +14,19 @@ def index(request, origin, destination):
     iter = wbc = 7 - int(time.strftime("%w"))
     weeklist = [wbc]
     month_length = (
-                jdatetime.date(int(time.year), int(time.month), 1) - jdatetime.date(int(time.year), int(time.month) - 1,
-                                                                                    1)).days
+            jdatetime.date(int(time.year), int(time.month), 1) - jdatetime.date(int(time.year), int(time.month) - 1,
+                                                                                1)).days
     while iter + 7 < month_length:
         iter += 7
         weeklist.append(iter)
-
+    if len(weeklist) == 4:
+        weeklist.append(month_length)
     if origin.lower() == 'tehran' and destination.lower() == 'mashad':
         return render(request, 'Charter.html',
                       {'response': res, 'origin': origin, 'destination': destination, 'wb': time.strftime("%w"),
-                       'wbc': wbc, 'weekends': weeklist})
+                       'wbc': wbc, 'w1': range(1, weeklist[0] + 1), 'w2': range(weeklist[0] + 1, weeklist[1] + 1),
+                       'w3': range(weeklist[1] + 1, weeklist[2] + 1), 'w4': range(weeklist[2] + 1, weeklist[3] + 1),
+                       'w5': range(weeklist[3] + 1, weeklist[4] + 1)})
     raise Http404('Cities not supported yet')
 
 

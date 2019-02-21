@@ -102,145 +102,92 @@
                 </div>
             {% endfor %}
         {% endwith %}
-        {% with ''|center:wbc as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+        {% for i in w1 %}
+            <div class="col-md-1">
+                <a href="#">
+                    <div class="card">
+                        <div class="card-header">
+                            <center>{{ i }}</center>
                         </div>
-                    </a>
-                </div>
-
-            {% endfor %}
-        {% endwith %}
-
-
+                        <div class="card-body">
+                            <center>100</center>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        {% with ''|center:7 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+        {% for i in w2 %}
+            <div class="col-md-1">
+                <a href="#">
+                    <div class="card">
+                        <div class="card-header">
+                            <center>{{ i }}</center>
                         </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
+                        <div class="card-body">
+                            <center>100</center>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        {% with ''|center:7 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc|add:7 }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+        {% for i in w3 %}
+            <div class="col-md-1">
+                <a href="#">
+                    <div class="card">
+                        <div class="card-header">
+                            <center>{{ i }}</center>
                         </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
+                        <div class="card-body">
+                            <center>100</center>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        {% with ''|center:7 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc|add:14 }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+        {% for i in w4 %}
+            <div class="col-md-1">
+                <a href="#">
+                    <div class="card">
+                        <div class="card-header">
+                            <center>{{ i }}</center>
                         </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
+                        <div class="card-body">
+                            <center>100</center>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        {% with ''|center:7 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc|add:14 }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+        {% for i in w5 %}
+            <div class="col-md-1">
+                <a href="#">
+                    <div class="card">
+                        <div class="card-header">
+                            <center>{{ i }}</center>
                         </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        {% with ''|center:7 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc|add:21 }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
+                        <div class="card-body">
+                            <center>100</center>
                         </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        {% with ''|center:weekends.0 as range %}
-            {% for _ in range %}
-                <div class="col-md-1">
-                    <a href="#">
-                        <div class="card">
-                            <div class="card-header">
-                                <center>{{ forloop.counter|add:wbc|add:21 }}</center>
-                            </div>
-                            <div class="card-body">
-                                <center>100</center>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endwith %}
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </div>
 <span class="spinner-grow"></span>
