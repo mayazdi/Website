@@ -2,450 +2,250 @@
 <html>
 
 <style>
-    .row{
+    .row {
         height: 130px;
     }
 </style>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Charter</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Charter Indexing Site</a>
-        <ul class="navbar-nav">
-            <div class="col-md-1"></div>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Origin:</a>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        Pick Origin
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Tehran</a>
-                        <a class="dropdown-item" href="#">Mashad</a>
-                        <a class="dropdown-item" href="#">Kish</a>
-                    </div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Charter Indexing Site</a>
+    <ul class="navbar-nav">
+        <div class="col-md-1"></div>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Origin:</a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Pick Origin{{ origin }}
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tehran</a>
+                    <a class="dropdown-item" href="#">Mashad</a>
+                    <a class="dropdown-item" href="#">Kish</a>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Destination:</a>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        Pick Destination
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Mashad</a>
-                        <a class="dropdown-item" href="#">Tehran</a>
-                        <a class="dropdown-item" href="#">Kish</a>
-                    </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Destination:</a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Pick Destination{{ destination }}
+                </button>
+                <div class="dropdown-menu">
+                    {% if destination %}
+
+                    {% endif %}
+                    <a class="dropdown-item" href="#">Mashad</a>
+                    <a class="dropdown-item" href="#">Tehran</a>
+                    <a class="dropdown-item" href="#">Kish</a>
                 </div>
-            </li>
-        </ul>
-    </nav>
+            </div>
+        </li>
+    </ul>
+</nav>
 <div class="container-fluid">
     <div class="row ">
         <div class="col-md-2">
         </div>
         <div class="col-md-1">
-            <center>Sat.</center>
+            <center>شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Sun.</center>
+            <center>یه شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Mon.</center>
+            <center>دو شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Tue.</center>
+            <center>سه شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Wed.</center>
+            <center>چار شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Thurs.</center>
+            <center>پنج شمبه</center>
         </div>
         <div class="col-md-1">
-            <center>Fri.</center>
+            <center>جمعه</center>
         </div>
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>01</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:wb as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
                 </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>02</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+            {% endfor %}
+        {% endwith %}
+        {% with ''|center:wbc as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>03</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>04</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>05</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>06</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>07</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
+
+            {% endfor %}
+        {% endwith %}
+
 
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>01</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:7 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>02</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>03</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>04</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>05</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>06</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>07</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-
+            {% endfor %}
+        {% endwith %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>01</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:7 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc|add:7 }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>02</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>03</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>04</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>05</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>06</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>07</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-
+            {% endfor %}
+        {% endwith %}
     </div>
     <div class="row">
         <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>01</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:7 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc|add:14 }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <div class="row">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>02</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:7 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc|add:14 }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <div class="row">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>03</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:7 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc|add:21 }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <div class="row">
+        <div class="col-md-2">
         </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>04</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
+        {% with ''|center:weekends.0 as range %}
+            {% for _ in range %}
+                <div class="col-md-1">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-header">
+                                <center>{{ forloop.counter|add:wbc|add:21 }}</center>
+                            </div>
+                            <div class="card-body">
+                                <center>100</center>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>05</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>06</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1">
-            <a href="#">
-                <div class="card">
-                    <div class="card-header">
-                        <center>07</center>
-                    </div>
-                    <div class="card-body">
-                        <center>100</center>
-                    </div>
-                </div>
-            </a>
-        </div>
-
+            {% endfor %}
+        {% endwith %}
     </div>
 </div>
 <span class="spinner-grow"></span>
-    <div class="container">
-    </div>
+<div class="container">
+</div>
 </body>
 
 </html>
