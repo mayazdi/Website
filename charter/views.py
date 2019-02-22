@@ -14,8 +14,8 @@ def index(request, origin, destination):
         iter = wbc = 7 - int(time.strftime("%w"))
         weeklist = [wbc]
         month_length = (
-            jdatetime.date(int(time.year), int(time.month), 1) - jdatetime.date(int(time.year), int(time.month) - 1,
-                                                                                1)).days
+                jdatetime.date(int(time.year), int(time.month), 1) - jdatetime.date(int(time.year), int(time.month) - 1,
+                                                                                    1)).days
         while iter + 7 <= month_length:
             iter += 7
             weeklist.append(iter)
@@ -27,21 +27,28 @@ def index(request, origin, destination):
         w4 = {}
         w5 = {}
         w6 = {}
-        for i in range(1, weeklist[0] + 1):
-            w1[i] = res[i - 1]
-        for i in range(weeklist[0] + 1, weeklist[1] + 1):
-            w2[i] = res[i - 1]
-        for i in range(weeklist[1] + 1, weeklist[2] + 1):
-            w3[i] = res[i - 1]
-        for i in range(weeklist[2] + 1, weeklist[3] + 1):
-            w4[i] = res[i - 1]
-        for i in range(weeklist[3] + 1, weeklist[4] + 1):
-            w5[i] = res[i - 1]
-        for i in range(weeklist[4] + 1, weeklist[5] + 1):
-            w6[i] = res[i - 1]
+        for i in range(0, weeklist[0]):
+            if i + time.day <= month_length:
+                w1[i + time.day] = (res[i - 1], 'markaz')
+        for i in range(weeklist[0], weeklist[1]):
+            if i + time.day <= month_length:
+                w2[i + time.day] = res[i - 1]
+        for i in range(weeklist[1], weeklist[2]):
+            if i + time.day <= month_length:
+                w3[i + time.day] = res[i - 1]
+        for i in range(weeklist[2], weeklist[3]):
+            if i + time.day <= month_length:
+                w4[i + time.day] = res[i - 1]
+        for i in range(weeklist[3], weeklist[4]):
+            if i + time.day <= month_length:
+                w5[i + time.day] = res[i - 1]
+        for i in range(weeklist[4], weeklist[5]):
+            if i + time.day <= month_length:
+                w6[i + time.day] = res[i - 1]
         return render(request, 'Charter.html',
                       {'response': res, 'origin': origin, 'destination': destination, 'wb': time.strftime("%w"),
-                       'wbc': wbc, 'w1': w1, 'w2': w2, 'w3': w3, 'w4': w4, 'w5': w5, 'w6': w6})
+                       'wbc': wbc, 'w1': w1, 'w2': w2, 'w3': w3, 'w4': w4, 'w5': w5, 'w6': w6, 'mon1': 'اسفند',
+                       'mon2': 'فروردین', 'domain': 'markazetour.ir'})
     raise Http404('Cities not supported yet')
 
 
