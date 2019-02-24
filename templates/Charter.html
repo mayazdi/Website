@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Charter</title>
+    <title>Charter Indexing Website</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -125,13 +125,13 @@
         {% endwith %}
         {% for key, value in w1.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ value.1 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value.0 }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
@@ -143,13 +143,13 @@
         </div>
         {% for key, value in w2.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ domain }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
@@ -161,13 +161,13 @@
         </div>
         {% for key, value in w3.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ domain }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
@@ -179,13 +179,13 @@
         </div>
         {% for key, value in w4.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ domain }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
@@ -197,13 +197,13 @@
         </div>
         {% for key, value in w5.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ domain }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
@@ -215,13 +215,13 @@
         </div>
         {% for key, value in w6.items %}
             <div class="col-md-1">
-                <a href="http://www.{{ domain }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
+                <a href="http://www.{{ value.0 }}/Systems/FlightCheapestPriceBar.aspx?Origin={{ origin }}&Destination={{ destination }}">
                     <div class="card">
                         <div class="card-header">
                             <center>{{ key }}</center>
                         </div>
                         <div class="card-body">
-                            <center>{{ value }}</center>
+                            <center>{{ value.1 }}</center>
                         </div>
                     </div>
                 </a>
